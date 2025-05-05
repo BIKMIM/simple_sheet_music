@@ -36,4 +36,4 @@ class BarLine extends MusicalSymbol {
 
   /// 굵은 세로줄 (종결선)
   static BarLine thick() => const BarLine(isThick: true);
-}
+}  
