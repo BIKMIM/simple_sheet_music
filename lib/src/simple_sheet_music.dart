@@ -7,6 +7,7 @@ import 'package:simple_sheet_music/src/glyph_metadata.dart';
 import 'package:simple_sheet_music/src/glyph_path.dart';
 import 'package:simple_sheet_music/src/measure/measure.dart';
 import 'package:simple_sheet_music/src/music_objects/clef/clef_type.dart';
+import 'package:simple_sheet_music/src/music_objects/symbols/bar_line.dart';
 import 'package:simple_sheet_music/src/sheet_music_metrics.dart';
 import 'package:simple_sheet_music/src/sheet_music_renderer.dart';
 import 'package:xml/xml.dart';
