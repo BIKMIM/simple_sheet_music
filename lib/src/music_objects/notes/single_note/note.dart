@@ -23,10 +23,10 @@ class Note implements MusicalSymbol {
     this.pitch, {
     this.noteDuration = NoteDuration.quarter,
     this.accidental,
+    this.isHighlighted = false, // ✅ 기본값 false
     this.margin = const EdgeInsets.all(10),
-    this.color = Colors.black,
-    // this.stemDirection,
-  });
+    Color? color, // <- 기본값 제거
+    }) : color = color ?? (isHighlighted ? Colors.orange : Colors.black); // ✅ 자동 지정
 
   @override
   final EdgeInsets margin;
@@ -39,6 +39,8 @@ class Note implements MusicalSymbol {
 
   /// The pitch of the note.
   final Pitch pitch;
+
+  final bool isHighlighted; // ✅ 새로 추가
 
   /// The duration of the note.
   final NoteDuration noteDuration;
