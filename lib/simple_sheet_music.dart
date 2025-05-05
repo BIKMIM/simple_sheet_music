@@ -4,6 +4,7 @@
 /// It takes a list of `Staff` objects and other optional parameters to customize the appearance of the sheet music.
 library simple_sheet_music;
 
+export 'src/music_objects/clef/clef_type.dart' show ClefType;
 export '/src/font_types.dart' show FontType;
 export '/src/measure/measure.dart' show Measure;
 export '/src/music_objects/clef/clef.dart' show Clef;
