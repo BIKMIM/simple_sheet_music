@@ -1,11 +1,11 @@
-import 'package:flutter/rendering.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:simple_sheet_music/src/glyph_metadata.dart';
 import 'package:simple_sheet_music/src/glyph_path.dart';
 import 'package:simple_sheet_music/src/music_objects/interface/musical_symbol.dart';
-import 'package:simple_sheet_music/src/musical_context.dart';
 import 'package:simple_sheet_music/src/music_objects/interface/musical_symbol_metrics.dart';
 import 'package:simple_sheet_music/src/music_objects/internal/concrete_musical_symbol_metrics.dart';
+import 'package:simple_sheet_music/src/musical_context.dart';
 
 class BarLine extends MusicalSymbol {
   final bool isThick;
@@ -33,9 +33,6 @@ class BarLine extends MusicalSymbol {
     return ConcreteMusicalSymbolMetrics(width: isThick ? 6 : 4, height: 0);
   }
 
-  /// 일반 세로줄
   static BarLine regular() => const BarLine();
-
-  /// 굵은 세로줄 (종결선)
   static BarLine thick() => const BarLine(isThick: true);
 }
