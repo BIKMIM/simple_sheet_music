@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sheet_music/src/music_objects/interface/musical_symbol_metrics.dart';
-import 'package:simple_sheet_music/src/musical_context.dart';
-import 'package:simple_sheet_music/src/music_objects/interface/musical_symbol_renderer.dart';
+import 'package:simple_sheet_music/src/sheet_music_layout.dart';
+import 'package:simple_sheet_music/src/renderer/musical_symbol_renderer.dart';
 
 class ConcreteMusicalSymbolMetrics extends MusicalSymbolMetrics {
   @override
@@ -28,8 +28,7 @@ class ConcreteMusicalSymbolMetrics extends MusicalSymbolMetrics {
   });
 
   @override
-  MusicalSymbolRenderer renderer(MusicalContext context) {
-    // 임시 구현: BarLine은 별도 renderer가 없으므로 비워둠.
-    throw UnimplementedError('BarLine은 renderer를 사용하지 않습니다.');
+  MusicalSymbolRenderer renderer(SheetMusicLayout context, {bool dryRun = false}) {
+    throw UnimplementedError('ConcreteMusicalSymbolMetrics.renderer()는 직접 구현되지 않음');
   }
 }
