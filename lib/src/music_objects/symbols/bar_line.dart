@@ -23,14 +23,14 @@ class BarLine extends MusicalSymbol {
     canvas.drawLine(start, end, paint);
   }
 
-  @override
-  MusicalSymbolMetrics setContext(
-    MusicalContext context,
-    GlyphMetadata metadata,
-    GlyphPaths paths,
-  ) {
-    return MusicalSymbolMetrics(width: isThick ? 6 : 4, height: 0);
-  }
+@override
+MusicalSymbolMetrics setContext(
+  MusicalContext context,
+  GlyphMetadata metadata,
+  GlyphPaths paths,
+) {
+  return ConcreteMusicalSymbolMetrics(width: isThick ? 6 : 4, height: 0); // 👈 여기만 수정
+}
 
   /// 일반 세로줄
   static BarLine regular() => const BarLine();
