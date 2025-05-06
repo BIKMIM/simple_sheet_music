@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sheet_music/src/music_objects/interface/musical_symbol_metrics.dart';
+import 'package:simple_sheet_music/src/sheet_music_layout.dart';
+import 'package:simple_sheet_music/src/renderer/musical_symbol_renderer.dart';
 
 class ConcreteMusicalSymbolMetrics extends MusicalSymbolMetrics {
   @override
@@ -17,7 +19,6 @@ class ConcreteMusicalSymbolMetrics extends MusicalSymbolMetrics {
   @override
   final EdgeInsets margin;
 
-  // 생성자에서 const 제거!
   ConcreteMusicalSymbolMetrics({
     required this.width,
     required this.height,
@@ -26,9 +27,12 @@ class ConcreteMusicalSymbolMetrics extends MusicalSymbolMetrics {
     this.margin = EdgeInsets.zero,
   });
 
-  // ❌ 이거는 삭제하거나 나중에 맞게 구현
-  // @override
-  // MusicalSymbolRenderer renderer(SheetMusicLayout context, {required double staffLineCenterY, bool dryRun = false}) {
-  //   throw UnimplementedError();
-  // }
+  @override
+  MusicalSymbolRenderer renderer(
+    SheetMusicLayout context, {
+    required double staffLineCenterY,
+    bool dryRun = false,
+  }) {
+    throw UnimplementedError(); // 지금은 임시로 던짐
+  }
 }
