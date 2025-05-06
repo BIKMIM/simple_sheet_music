@@ -27,12 +27,12 @@ class ConcreteMusicalSymbolMetrics extends MusicalSymbolMetrics {
     this.margin = EdgeInsets.zero,
   });
 
-  @override
-  MusicalSymbolRenderer renderer(
-    SheetMusicLayout context, {
-    required double staffLineCenterY,
-    bool dryRun = false,
-  }) {
-    throw UnimplementedError(); // 지금은 임시로 던짐
-  }
+ @override
+MusicalSymbolRenderer renderer(
+  SheetMusicLayout context, {
+  bool dryRun = false,
+  double? staffLineCenterY,
+}) {
+  return const MusicalSymbolRenderer();
+}
 }
