@@ -7,5 +7,8 @@ class ConcreteMusicalSymbolMetrics extends MusicalSymbolMetrics {
   @override
   final double height;
 
-  const ConcreteMusicalSymbolMetrics({required this.width, required this.height});
+  const ConcreteMusicalSymbolMetrics({
+    required this.width,
+    required this.height,
+  });
 }
