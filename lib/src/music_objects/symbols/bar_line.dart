@@ -5,6 +5,8 @@ import 'package:simple_sheet_music/src/glyph_path.dart';
 import 'package:simple_sheet_music/src/music_objects/interface/musical_symbol.dart';
 import 'package:simple_sheet_music/src/musical_context.dart';
 import 'package:simple_sheet_music/src/music_objects/interface/musical_symbol_metrics.dart';
+import 'package:simple_sheet_music/src/music_objects/internal/concrete_musical_symbol_metrics.dart';
+
 
 class BarLine extends MusicalSymbol {
   final bool isThick;
@@ -29,8 +31,9 @@ MusicalSymbolMetrics setContext(
   GlyphMetadata metadata,
   GlyphPaths paths,
 ) {
-  return ConcreteMusicalSymbolMetrics(width: isThick ? 6 : 4, height: 0); // 👈 여기만 수정
+  return ConcreteMusicalSymbolMetrics(width: isThick ? 6 : 4, height: 0);
 }
+
 
   /// 일반 세로줄
   static BarLine regular() => const BarLine();
